@@ -35,6 +35,10 @@ export const AuthPage = () => {
     clearError()
   }, [error, message, clearError])
 
+  useEffect(() => {
+    window.M.updateTextFields()
+  }, [])
+
   return (
     <div className="row">
       <div className="col s6 offset-s3">
