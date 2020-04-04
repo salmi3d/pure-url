@@ -13,8 +13,7 @@ app.use(express.json({ extended: true }))
 
 
 app.use('/api/user', require('./routes/user.route'))
-// app.use('/api/auth', require('./routes/auth.route'))
-// app.use('/', posts.index)
+app.use('/api/link', require('./routes/link.route'))
 app.use('*', (req, res) => res.status(404).json({ error: 'not found' }))
 
 
