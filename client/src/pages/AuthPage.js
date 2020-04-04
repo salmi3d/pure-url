@@ -47,12 +47,12 @@ export const AuthPage = () => {
           <div className="card-content white-text">
             <span className="card-title">Authorization</span>
             <div>
-              <div class="input-field">
-                <input placeholder="Email" id="email" type="text" name="email" onChange={changeHandler} />
+              <div className="input-field">
+                <input placeholder="Email" id="email" type="text" name="email" value={form.email} onChange={changeHandler} />
                 <label htmlFor="email">Enter email</label>
               </div>
-              <div class="input-field">
-                <input placeholder="Password" id="password" type="password" name="password" onChange={changeHandler} />
+              <div className="input-field">
+                <input placeholder="Password" id="password" type="password" name="password" value={form.password} onChange={changeHandler} />
                 <label htmlFor="password">Enter password</label>
               </div>
             </div>
@@ -66,7 +66,7 @@ export const AuthPage = () => {
               onClick={registerHandler}
               disabled={loading}
             >Sing UP</button>
-            <div class="clearfix"></div>
+            <div className="clearfix"></div>
           </div>
         </div>
       </div>
