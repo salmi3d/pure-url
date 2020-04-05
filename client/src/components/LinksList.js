@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const LinksList = ({ links }) => {
   if (links.length === 0) {
-    return <p className="center">There is no links yet</p>
+    return <p className="center">There are no links yet</p>
   }
 
   return (

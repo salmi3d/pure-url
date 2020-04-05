@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-// const path = require('path')
+const path = require('path')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const morgan = require('morgan')
@@ -15,12 +15,16 @@ app.use(express.json({ extended: true }))
 app.use('/api/user', require('./routes/user.route'))
 app.use('/api/link', require('./routes/link.route'))
 app.use('/t', require('./routes/redirect.route'))
-app.use('*', (req, res) => res.status(404).json({ error: 'not found' }))
 
-
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 const start = async () => {
-  const PORT = process.env.PORT || 3001
+  const PORT = process.env.PORT || 5000
   try {
     await mongoose.connect(process.env.DB_URI, {
       useNewUrlParser: true,

@@ -13,7 +13,7 @@ module.exports = class LinkController {
         return res.json({ link: exists })
       }
 
-      const to = `/t/${code}`
+      const to = `${req.protocol}://${req.get('host')}/t/${code}`
       const link = new Link({
         code,
         to,
