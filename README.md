@@ -9,7 +9,10 @@ Demo lives here: [https://pure-url.salmi3d.now.sh](https://pure-url.salmi3d.now.
 ## Setup
 
 ```
+cd <project-folder>
 yarn setup
+rename file .env.example to .env
+edit .env file: change `DB_URI` to your MongoDB connection string and `SECRET_KEY` to your super secret passphrase
 ```
 
 ## Run for development
