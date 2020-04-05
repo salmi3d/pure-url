@@ -4,7 +4,8 @@
   "description": "pure-url",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
+    "setup": "yarn && yarn --cwd client",
+    "start": "yarn build && cross-env NODE_ENV=production node server.js",
     "server": "nodemon server.js",
     "client": "yarn --cwd client start",
     "build": "yarn --cwd client build",
@@ -12,8 +13,8 @@
   },
   "keywords": [
     "mongo",
-    "react",
     "express",
+    "react",
     "nodejs"
   ],
   "license": "ISC",

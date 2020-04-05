@@ -18,7 +18,7 @@
     }
   ],
   "env": {
-    "DB_URI": "@db-uri",
-    "SECRET_KEY": "@secret-key"
+    "DB_URI": "@pure-url.db-uri",
+    "SECRET_KEY": "@pure-url.secret-key"
   }
 }

@@ -15,7 +15,7 @@ app.use(express.json({ extended: true }))
 app.use('/api/user', require('./routes/user.route'))
 app.use('/api/link', require('./routes/link.route'))
 app.use('/t', require('./routes/redirect.route'))
-
+console.log('env', process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))
   app.get('*', (req, res) => {
