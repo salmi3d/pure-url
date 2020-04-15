@@ -61,11 +61,11 @@ export const AuthPage = () => {
             <button className="btn teal left"
               onClick={loginHandler}
               disabled={loading}
-            >Sing IN</button>
+            >Sign IN</button>
             <button className="btn cyan right"
               onClick={registerHandler}
               disabled={loading}
-            >Sing UP</button>
+            >Sign UP</button>
             <div className="clearfix"></div>
           </div>
         </div>
