@@ -1,6 +1,6 @@
-# pure-url
+# ✂️ pure-url
 
-URL Shortener service written with `MERN` stack: MongoDB, Express, React, Node.js
+URL Shortener service is built with `MERN` stack: MongoDB, Express, React, Node.js
 
 ## Demo
 
